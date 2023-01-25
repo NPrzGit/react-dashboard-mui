@@ -1,15 +1,15 @@
 import { Route, Routes } from "react-router-dom";
 
-interface Props{
+interface Props {
     //children: React.ReactNode;
     children: JSX.Element[] | JSX.Element;
 };
 
-function RoutesWithNotFound({children}: Props){
+function RoutesWithNotFound({ children }: Props) {
     return (
         <Routes>
             {children}
-            <Route path="*" element={<div>Not Found</div>}/>
+            <Route path="*" element={<div>Not Found</div>} />
         </Routes>
     );
 };
