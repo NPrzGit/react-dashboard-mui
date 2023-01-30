@@ -26,17 +26,16 @@ export default function App() {
       }>
         <Provider store={store}>
           <BrowserRouter>
-            <Logout />
+            {/*<Logout />*/}
             <RoutesWithNotFound>
               {/*default*/}
               <Route path="/" element={<Navigate to={PrivateRoutes.PRIVATE} />} />
               <Route path={PublicRoutes.LOGIN} element={<Login />} />
               {/* dashboard  */}
               <Route element={<AuthGuard privateValidation={true} />}>
-                <Route path={`${PrivateRoutes.PRIVATE}/*`} element={(<Private />)} />
-              </Route>
-              <Route element={<RolGuard rol={Roles.ADMIN} />}>
-                <Route path={PrivateRoutes.DASHBOARD} element={<Dashboard />} />
+                <Route element={<RolGuard rol={Roles.ADMIN} />}>
+                  <Route path={`${PrivateRoutes.PRIVATE}/*`} element={(<Private />)} />
+                </Route>
               </Route>
             </RoutesWithNotFound>
           </BrowserRouter>

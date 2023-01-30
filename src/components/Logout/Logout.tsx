@@ -15,7 +15,7 @@ function Logout() {
         navigate(`/${PublicRoutes.LOGIN}`, { replace: true });
     }
     return (
-        <button onClick={logOut}>Logout</button>
+        <div onClick={logOut}>Logout</div>
     )
 }
 

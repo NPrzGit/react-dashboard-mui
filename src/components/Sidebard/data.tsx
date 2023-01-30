@@ -11,7 +11,7 @@ export const links = [
       title: 'Dashboard',
       links: [
         {
-          name: 'ecommerce',
+          name: 'dashboard',
           icon: <FiShoppingBag />,
         },
       ],
@@ -30,6 +30,10 @@ export const links = [
         },
         {
           name: 'customers',
+          icon: <RiContactsLine />,
+        },
+        {
+          name: 'users',
           icon: <RiContactsLine />,
         },
       ],
