@@ -134,11 +134,13 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 
 
 function Home() {
+  const navigate = useNavigate();
+  
   useEffect(() => {
     navigate(PrivateRoutes.DASHBOARD);
   }, []);
 
-  const navigate = useNavigate();
+  
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
@@ -284,12 +286,12 @@ function Home() {
                     justifyContent: open ? 'initial' : 'center',
                     px: 2.5,
                   }}
-
+                  key={Link.name}
                   onClick={() => {
                     {/*<Navigate to={PrivateRoutes.DASHBOARD} replace={true} />*/ }
                     {/* navigate(`/${PrivateRoutes.PRIVATE}/Dashboard`, { replace: true })*/ }
                     navigate(Link.name)
-                    console.log(Link.name)
+                    {/*console.log(Link.name)*/}
                   }}
                 >
 

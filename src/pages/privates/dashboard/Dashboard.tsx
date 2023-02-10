@@ -1,8 +1,9 @@
+import { OrdersForm } from "../../../components"
 
 
 function Dashboard() {
   return (
-    <div>Dashboard</div>
+    <><OrdersForm/></>
   )
 }
 
